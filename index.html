@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive Image Gallery built with HTML, CSS and JavaScript for Week 2 web development assignment.">
+  <title>Interactive Image Gallery | Sachin Yadav</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Interactive Gallery home">
+        <span class="brand-icon">✦</span>
+        <span>Pixel<span>Gallery</span></span>
+      </a>
+      <span class="week-badge">· JAVASCRIPT</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero container">
+      <div class="eyebrow"><span></span> Interactive Image Experience</div>
+      <h1>Explore the <span>visual collection.</span></h1>
+      <p class="hero-copy">
+        A responsive image gallery with hover animations, filters and a full-screen lightbox.
+        Click any image to open it, then use the arrows or keyboard to explore.
+      </p>
+      <div class="hero-stats" aria-label="Gallery information">
+        <div><strong>08</strong><span>Images</span></div>
+        <div><strong>01</strong><span>Lightbox</span></div>
+        <div><strong>100%</strong><span>Responsive</span></div>
+      </div>
+    </section>
+
+    <section class="gallery-section container" aria-labelledby="gallery-title">
+      <div class="section-heading">
+        <div>
+          <span class="section-label">THE COLLECTION</span>
+          <h2 id="gallery-title">Moments in focus</h2>
+        </div>
+        <p>Hover for a preview · Click to expand</p>
+      </div>
+
+      <div class="filters" role="group" aria-label="Filter gallery images">
+        <button class="filter-btn active" type="button" data-filter="all">All <span>8</span></button>
+        <button class="filter-btn" type="button" data-filter="nature">Nature <span>3</span></button>
+        <button class="filter-btn" type="button" data-filter="city">City <span>3</span></button>
+        <button class="filter-btn" type="button" data-filter="travel">Travel <span>2</span></button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <article class="gallery-item item-large" data-category="nature" data-index="0">
+          <button class="image-card" type="button" aria-label="Open Aurora Valley image">
+            <img src="images/aurora.jpg" alt="Illustration of an aurora over a mountain valley" loading="eager">
+            <span class="image-overlay"><span>View image ↗</span></span>
+            <span class="category-tag">Nature</span>
+          </button>
+          <div class="image-info"><div><h3>Aurora Valley</h3><p>Nature · 01</p></div><span class="arrow">↗</span></div>
+        </article>
+
+        <article class="gallery-item" data-category="city" data-index="1">
+          <button class="image-card" type="button" aria-label="Open Neon City image">
+            <img src="images/neon city.jpg" alt="Illustration of a neon city at night" loading="lazy">
+            <span class="image-overlay"><span>View image ↗</span></span>
+            <span class="category-tag">City</span>
+          </button>
+          <div class="image-info"><div><h3>Neon City</h3><p>City · 02</p></div><span class="arrow">↗</span></div>
+        </article>
+
+        <article class="gallery-item" data-category="travel" data-index="2">
+          <button class="image-card" type="button" aria-label="Open Coastal Road image">
+            <img src="images/coastal road.jpg" alt="Illustration of a coastal road beside the ocean" loading="lazy">
+            <span class="image-overlay"><span>View image ↗</span></span>
+            <span class="category-tag">Travel</span>
+          </button>
+          <div class="image-info"><div><h3>Coastal Road</h3><p>Travel · 03</p></div><span class="arrow">↗</span></div>
+        </article>
+
+        <article class="gallery-item" data-category="nature" data-index="3">
+          <button class="image-card" type="button" aria-label="Open Wild Forest image">
+            <img src="images/forest.jpg" alt="Illustration of a misty green forest" loading="lazy">
+            <span class="image-overlay"><span>View image ↗</span></span>
+            <span class="category-tag">Nature</span>
+          </button>
+          <div class="image-info"><div><h3>Wild Forest</h3><p>Nature · 04</p></div><span class="arrow">↗</span></div>
+        </article>
+
+        <article class="gallery-item" data-category="city" data-index="4">
+          <button class="image-card" type="button" aria-label="Open Skyline image">
+            <img src="images/skyline.jpg" alt="Illustration of a modern city skyline at sunset" loading="lazy">
+            <span class="image-overlay"><span>View image ↗</span></span>
+            <span class="category-tag">City</span>
+          </button>
+          <div class="image-info"><div><h3>Golden Skyline</h3><p>City · 05</p></div><span class="arrow">↗</span></div>
+        </article>
+
+        <article class="gallery-item item-wide" data-category="travel" data-index="5">
+          <button class="image-card" type="button" aria-label="Open Desert Journey image">
+            <img src="images/desert.jpg" alt="Illustration of a desert journey beneath a large sun" loading="lazy">
+            <span class="image-overlay"><span>View image ↗</span></span>
+            <span class="category-tag">Travel</span>
+          </button>
+          <div class="image-info"><div><h3>Desert Journey</h3><p>Travel · 06</p></div><span class="arrow">↗</span></div>
+        </article>
+
+        <article class="gallery-item" data-category="nature" data-index="6">
+          <button class="image-card" type="button" aria-label="Open Mountain Lake image">
+            <img src="images/mountain lake.jpg" alt="Illustration of a mountain lake at sunrise" loading="lazy">
+            <span class="image-overlay"><span>View image ↗</span></span>
+            <span class="category-tag">Nature</span>
+          </button>
+          <div class="image-info"><div><h3>Mountain Lake</h3><p>Nature · 07</p></div><span class="arrow">↗</span></div>
+        </article>
+
+        <article class="gallery-item" data-category="city" data-index="7">
+          <button class="image-card" type="button" aria-label="Open Night Drive image">
+            <img src="images/night drive.jpg" alt="Illustration of a night drive through a city" loading="lazy">
+            <span class="image-overlay"><span>View image ↗</span></span>
+            <span class="category-tag">City</span>
+          </button>
+          <div class="image-info"><div><h3>Night Drive</h3><p>City · 08</p></div><span class="arrow">↗</span></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><strong>Sachin Yadav</strong><span>Web Development</span></div>
+      <p>Built with HTML · CSS · JavaScript</p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle">
+    <button class="lightbox-close" id="closeLightbox" type="button" aria-label="Close image viewer">×</button>
+    <button class="lightbox-nav prev" id="prevImage" type="button" aria-label="Previous image">‹</button>
+
+    <div class="lightbox-content">
+      <div class="lightbox-image-wrap">
+        <img id="lightboxImage" src="" alt="">
+      </div>
+      <div class="lightbox-caption">
+        <div>
+          <span id="lightboxCategory">CATEGORY</span>
+          <h2 id="lightboxTitle">Image title</h2>
+        </div>
+        <span id="lightboxCounter">01 / 08</span>
+      </div>
+    </div>
+
+    <button class="lightbox-nav next" id="nextImage" type="button" aria-label="Next image">›</button>
+    <p class="lightbox-hint">ESC to close · ← → to navigate</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
